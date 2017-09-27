@@ -1,6 +1,6 @@
 #include "rbactest.h"
 
-/***************************系统存储的用户角色权限信息*********************************************/
+/*系统存储的用户角色权限信息*/
 static struct s_usrs usrs[3]={{1,1,"Fan","123456"},{2,2,"Huang","123456"},{3,3,"Zhang","123456"}};//uid,rid,un,up
 static struct s_roles roles[3]={{1,"superadmin"},{2,"admin"},{3,"user"}};//rid,rna
 static struct s_roles_peivs role_pers[3]={{"superadmin","rwad"},{"admin","rw"},{"user","r"}};//1111=r,w,a,d
@@ -12,9 +12,9 @@ int32_t g_sum_pers;
 int32_t g_per_a,g_per_d,g_per_w,g_per_r;
 /*权限集合*/
 char g_pers[4];
-/****************角色的名称：superadmin,admin,user*********************/
+/*角色的名称：superadmin,admin,user*/
 char g_r_name[20];
-/********通过角色ID发现角色name***********/
+/*通过角色ID发现角色name*/
 void usr_to_role(int32_t rid)
 {
     printf("#########################################\n");
@@ -27,14 +27,14 @@ void usr_to_role(int32_t rid)
         }	
     }
 }
-/*********用户登录**********************/
+/*用户登录*/
 int32_t usrs_login()
 {
     int32_t i;
     int32_t r_index=0;//角色的ID
 	int32_t login_succeed = 0;
     //find usrname
-    /********存储用户输入名称和密码***********/
+    /*存储用户输入名称和密码*/
     char usrname[20]={'0'},usrpwd[20]={'0'};
     printf("Please login user>>>>>>>>>>\n");
     printf("Input user's name:\n");
