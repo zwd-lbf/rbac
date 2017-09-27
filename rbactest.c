@@ -6,11 +6,11 @@ static struct s_roles roles[3]={{1,"superadmin"},{2,"admin"},{3,"user"}};//rid,r
 static struct s_roles_peivs role_pers[3]={{"superadmin","rwad"},{"admin","rw"},{"user","r"}};//1111=r,w,a,d
 static struct s_peivs peivs[4]={{1,'r'},{2,'w'},{4,'a'},{8,'d'}};
 
-/********存储权限的集合值*****************/
+/*存储权限的集合值*/
 int32_t g_sum_pers;
-/********操作权限标志位*******************/
+/*操作权限标志位*/
 int32_t g_per_a,g_per_d,g_per_w,g_per_r;
-/****************权限集合**********************************************/
+/*权限集合*/
 char g_pers[4];
 /****************角色的名称：superadmin,admin,user*********************/
 char g_r_name[20];
